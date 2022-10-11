@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IL TEMPO SILENZIO DI UF</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #1a1919;
+        }
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #fff;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            background: #92151b;
+            display: inline-block;
+        }
+
+        #clockdiv div>span {
+            padding: 15px;
+            border-radius: 3px;
+            background: #e7a310a1;
+            display: inline-block;
+        }
+
+        .smalltext {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .uf {
+            color: #fff;
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+    </style>
+
+    <div class="title">
+        <p class="uf">Il tempo del silenzio di UF</p>
+        <div id="clockdiv">
+            <div>
+                <span class="days"></span>
+                <div class="smalltext">Giorni</div>
+            </div>
+            <div>
+                <span class="hours"></span>
+                <div class="smalltext">Ore</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Minuti</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Secondi</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="timer.js"></script>

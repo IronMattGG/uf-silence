@@ -23,6 +23,23 @@ function Time() {
     };
 }
 
+function TimerStopped() {
+    var stoppedDate = new Date(2022, 9, 11, 17, 26);
+    var startDate = Time().pastDate;
+    var eT = stoppedDate - startDate;
+
+    let = days = Math.floor(eT / (1000 * 60 * 60 * 24));
+    let = hours = Math.floor((eT / (1000 * 60 * 60)) % 24);
+    let = minutes = Math.floor((eT / 1000 / 60) % 60);
+    let = seconds = Math.floor((eT / 1000) % 60);
+
+    return {
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds,
+    };
+}
 
 function startClock() {
     var clock = document.getElementById('divtimer');
@@ -50,27 +67,8 @@ function startClock() {
     updateClock();
 }
 
-function TimerStopped() {
-    var stoppedDate = new Date(2022, 9, 11, 17, 26);
-    var startDate = Time().pastDate;
-    var eT = stoppedDate - startDate;
-
-    let = days = Math.floor(eT / (1000 * 60 * 60 * 24));
-    let = hours = Math.floor((eT / (1000 * 60 * 60)) % 24);
-    let = minutes = Math.floor((eT / 1000 / 60) % 60);
-    let = seconds = Math.floor((eT / 1000) % 60);
-
-    return {
-        'days': days,
-        'hours': hours,
-        'minutes': minutes,
-        'seconds': seconds,
-    };
-    updateClock();
-}
-
 if (!isStopped) {
     setInterval(startClock, 1000);
 } else {
-    TimerStopped();
+    startClock();
 }

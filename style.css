@@ -1,0 +1,41 @@
+body {
+    background-color: #1a1919;
+}
+
+#divtimer {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#divtimer>div {
+    padding: 10px;
+    border-radius: 3px;
+    background: #92151b;
+    display: inline-block;
+}
+
+#divtimer div>span {
+    padding: 15px;
+    border-radius: 3px;
+    background: #e7a310a1;
+    display: inline-block;
+}
+
+.smalltext {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.title {
+    text-align: center;
+}
+
+.uf {
+    color: #fff;
+    font-size: 30px;
+    font-family: sans-serif;
+}

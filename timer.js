@@ -1,11 +1,14 @@
-// uf-silence 0.1
+// uf-silence 0.3
 // https://github.com/IronMattGG
 // @ironmattgg on socials
 
-var isStopped = true;
+const isStopped = true;
+const silenceElapsed = 'Il tempo del silenzio di UF è durato:';
+const silenceActive = 'Il tempo del silenzio di UF';
+var pastDate = new Date(2022, 9, 9, 10, 49);
+var stoppedDate = new Date(2022, 9, 11, 17, 26);
 
 function Time() {
-    let pastDate = new Date(2022, 9, 9, 10, 49);
     let today = new Date();
     let t = (today - pastDate);
 
@@ -24,7 +27,6 @@ function Time() {
 }
 
 function TimerStopped() {
-    var stoppedDate = new Date(2022, 9, 11, 17, 26);
     var startDate = Time().pastDate;
     var eT = stoppedDate - startDate;
 
@@ -53,10 +55,10 @@ function startClock() {
 
         if (!isStopped) {
             var t = Time();
-            timeTitle.innerHTML = 'Il tempo del silenzio di UF';
+            timeTitle.innerHTML = silenceActive;
         } else {
             var t = TimerStopped();
-            timeTitle.innerHTML = 'Il tempo del silenzio di UF è durato:';
+            timeTitle.innerHTML = silenceElapsed;
         }
 
         daysSpan.innerHTML = t.days;

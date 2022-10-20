@@ -64,7 +64,11 @@ function startClock() {
 
         if (!isStopped) {
             var t = Time();
-            timeTitle.innerHTML = silenceActive;
+            if (isSavage) {
+                timeTitle.innerHTML = silenceSavage;
+            } else {
+                timeTitle.innerHTML = silenceActive;
+            }
         } else {
             var t = TimerStopped();
             timeTitle.innerHTML = silenceElapsed;

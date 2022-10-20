@@ -1,16 +1,26 @@
-// uf-silence 0.3
+// uf-silence 0.4
 // https://github.com/IronMattGG
 // @ironmattgg on socials
 
-const isStopped = true;
+const isStopped = false;
+const isSavage = true;
+
 const silenceElapsed = 'Il tempo del silenzio di UF è durato:';
 const silenceActive = 'Il tempo del silenzio di UF';
+const silenceSavage = 'Colui che sentenzia non proferisce parola da:';
+
 var pastDate = new Date(2022, 9, 9, 10, 49);
 var stoppedDate = new Date(2022, 9, 11, 17, 26);
+var savageDate = new Date(2022, 9, 13, 17, 03);
 
 function Time() {
     let today = new Date();
-    let t = (today - pastDate);
+
+    if (isSavage) {
+        var t = (today - savageDate);
+    } else {
+        var t = (today - pastDate);
+    }
 
     let = days = Math.floor(t / (1000 * 60 * 60 * 24));
     let = hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -21,13 +31,12 @@ function Time() {
         'days': days,
         'hours': hours,
         'minutes': minutes,
-        'seconds': seconds,
-        'pastDate': pastDate
+        'seconds': seconds
     };
 }
 
 function TimerStopped() {
-    var startDate = Time().pastDate;
+    var startDate = pastDate;
     var eT = stoppedDate - startDate;
 
     let = days = Math.floor(eT / (1000 * 60 * 60 * 24));

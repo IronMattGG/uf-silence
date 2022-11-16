@@ -1,9 +1,9 @@
-// uf-silence 0.5
+// uf-silence 0.6
 // https://github.com/IronMattGG
 // @ironmattgg on socials
 
-const isStopped = true;
-const isSavage = false;
+const isStopped = false; // Stops and visualize the time passed
+const isSavage = false; // Visualizza il tempo del silenzio da parte sua
 
 const silenceElapsed = 'Il tempo del silenzio di UF è durato:';
 const silenceActive = 'Il tempo del silenzio di UF';
@@ -12,8 +12,9 @@ const silenceSavage = 'Colui che sentenzia non proferisce parola da:';
 // var pastDate = new Date(2022, 9, 9, 10, 49); // 1 edition
 // var stoppedDate = new Date(2022, 9, 11, 17, 26); // 1 edition
 // var savageDate = new Date(2022, 9, 13, 17, 03); // 1 edition
-var pastDate = new Date(2022, 9, 13, 17, 03);
-var stoppedDate = new Date(2022, 9, 20, 18, 46);
+// var pastDate = new Date(2022, 9, 13, 17, 03); // 2 edition
+// var stoppedDate = new Date(2022, 9, 20, 18, 46); // 2 edition
+var pastDate = new Date(2022, 10, 10, 22, 20);
 
 function Time() {
     let today = new Date();

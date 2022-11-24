@@ -6,6 +6,7 @@ const isStopped = false; // Stops and visualize the time passed
 const isSavage = false; // Visualizza il tempo del silenzio da parte sua
 
 removeBar = document.body.style.overflow = 'hidden'; // remove scrollbars
+
 const silenceElapsed = 'Il tempo del silenzio di UF è durato:';
 const silenceActive = 'Il tempo del silenzio di UF';
 const silenceSavage = 'Colui che sentenzia non proferisce parola da:';

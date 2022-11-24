@@ -8,8 +8,10 @@ body {
   }
 
   h1 {
-    font-size: calc(2px + 18vh);
-    line-height: calc(2px + 2vh);
+    /* font-size: calc(20px + 18vh);
+    line-height: calc(20px + 20vh); */
+    font-size: 100px;
+    line-height: 10px;
     text-shadow: 0 0 5px #ffa500, 
                 0 0 15px #ffa500, 
                 0 0 20px #ffa500, 
@@ -118,8 +120,6 @@ span {
     font-family: 'Lobster';
 }
 
-
-
 @keyframes move-background {
     from {
           -webkit-transform: translate3d(0px, 0px, 0px);
@@ -174,27 +174,28 @@ span {
         z-index: 0;
   }
   
-  .clouds{
-      width: 1000px;
-      height: 100%;
-      background: transparent url("img/clouds.png") repeat;
-      background-size: 1000px 1000px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 3;
-  
-     -moz-animation:move-background 150s linear infinite;
-    -ms-animation:move-background 150s linear infinite;
-    -o-animation:move-background 150s linear infinite;
-    -webkit-animation:move-background 150s linear infinite;
-    animation:move-background 150s linear infinite;
-  }
-  img{
-    height: 70vh;
-    width:70vh;
+  #sky {
+	overflow: hidden;
+}
+.clouds{
+	width: 10000px;
+	height: 100%;
+	background: transparent url("img/clouds.png") repeat;
+	background-size: 1000px 1000px;
     position: absolute;
+    opacity: 0.7;
+    right: 0;
+    top: 0;
+    bottom: 0;
     z-index: 3;
-    right: 20px;
-  }
+
+   -moz-animation:move-background 150s linear infinite;
+  -ms-animation:move-background 150s linear infinite;
+  -o-animation:move-background 150s linear infinite;
+  -webkit-animation:move-background 150s linear infinite;
+  animation:move-background 150s linear infinite;
+}
+@keyframes movingclouds {
+	0% {margin-left: 0%;}
+	100% {margin-left: -100%;}
+}

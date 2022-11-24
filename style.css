@@ -1,5 +1,78 @@
 body {
-    background-color: #1a1919;
+    padding: 2vw;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+  }
+
+  h1 {
+    font-size: calc(2px + 18vh);
+    line-height: calc(2px + 2vh);
+    text-shadow: 0 0 5px #ffa500, 
+                0 0 15px #ffa500, 
+                0 0 20px #ffa500, 
+                0 0 40px #ffa500, 
+                0 0 60px #ff0000, 
+                0 0 10px #ff8d00, 
+                0 0 98px #ff0000;
+      color: #ffa9a9;
+    font-family: "Sacramento";
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+  
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+    text-shadow: 0 0 5px #ffa500, 
+                0 0 15px #ffa500, 
+                0 0 20px #ffa500, 
+                0 0 40px #ffa500, 
+                0 0 60px #ff0000, 
+                0 0 10px #ff8d00, 
+                0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
+
+span {
+    font-family: 'Lato';
 }
 
 #divtimer {
@@ -28,6 +101,7 @@ body {
 .smalltext {
     padding-top: 5px;
     font-size: 16px;
+    font-family: 'Lato';
 }
 
 .title {
@@ -39,3 +113,88 @@ body {
     font-size: 30px;
     font-family: sans-serif;
 }
+
+#timeTitle {
+    font-family: 'Lobster';
+}
+
+
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  .background-container{
+      position: fixed;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+  }
+  
+  .stars {
+   background: black url('img/stars.png') repeat;
+   position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+        z-index: 0;
+  }
+  
+  .clouds{
+      width: 1000px;
+      height: 100%;
+      background: transparent url("img/clouds.png") repeat;
+      background-size: 1000px 1000px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+  
+     -moz-animation:move-background 150s linear infinite;
+    -ms-animation:move-background 150s linear infinite;
+    -o-animation:move-background 150s linear infinite;
+    -webkit-animation:move-background 150s linear infinite;
+    animation:move-background 150s linear infinite;
+  }
+  img{
+    height: 70vh;
+    width:70vh;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+  }

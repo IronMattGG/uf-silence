@@ -2,7 +2,7 @@
 // https://github.com/IronMattGG
 // @ironmattgg on socials
 
-const isStopped = false; // Stops and visualize the time passed
+const isStopped = true; // Stops and visualize the time passed
 const isSavage = false; // Visualizza il tempo del silenzio da parte sua
 
 removeBar = document.body.style.overflow = 'hidden'; // remove scrollbars
@@ -17,6 +17,7 @@ const silenceSavage = 'Colui che sentenzia non proferisce parola da:';
 // var pastDate = new Date(2022, 9, 13, 17, 03); // 2 edition
 // var stoppedDate = new Date(2022, 9, 20, 18, 46); // 2 edition
 var pastDate = new Date(2022, 10, 10, 22, 20);
+var stoppedDate = new Date(2022, 11, 01, 11, 56);
 
 function Time() {
     let today = new Date();

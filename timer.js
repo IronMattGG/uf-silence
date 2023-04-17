@@ -7,6 +7,8 @@ const isSavage = false; // Visualizza il tempo del silenzio da parte sua
 
 removeBar = document.body.style.overflow = 'hidden'; // remove scrollbars
 
+//TODO $('body').bind('touchmove', function(e){e.preventDefault()}) // disable scrolling on devices
+
 const silenceElapsed = 'Il tempo del silenzio di UF è durato:';
 const silenceActive = 'Il tempo del silenzio di UF';
 const silenceSavage = 'Colui che sentenzia non proferisce parola da:';
